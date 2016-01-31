@@ -1,2 +1,10 @@
-<%= current_user.name %>
-<%= current_user.email %>
+<div class="container">
+	<p>
+		<h1><%= current_user.name %></h1>
+		
+	</p>
+	<p>
+		<h3>Microposts (<%= @user.microposts.count %>)</h3>
+
+	</p>
+</div>

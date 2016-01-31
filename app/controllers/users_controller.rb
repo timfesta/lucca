@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 	before_filter :authorize, only: [:show]
 
+	def index
+		render :new
+	end
+	
 	def new
 		if current_user
 			redirect_to profile_path
@@ -24,6 +28,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
+		@user = User.find(session[:user_id])
+		@microposts = @user.microposts.paginate(page: params[:page])
 	end
 
 	def destroy
