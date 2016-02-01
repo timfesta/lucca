@@ -1,5 +1,3 @@
-# Ruby on Rails Tutorial: "hello, world!"
+Ruby on Rails app
 
-This is the first application for the
-[*Ruby on Rails Tutorial*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+https://gentle-castle-18230.herokuapp.com/
