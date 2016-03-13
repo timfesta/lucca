@@ -20,6 +20,7 @@ gem 'sdoc',                    '~> 0.4.0', group: :doc
 gem 'pg'
 gem 'paperclip'
 gem 'aws-sdk'
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
 
 group :development, :test do
