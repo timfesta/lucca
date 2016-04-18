@@ -2,29 +2,35 @@
     <img class="img-responsive" src="./assets/town.png" width="100%" height="100">
 </div>
 <div class="container">
-  <div class="row">
-    <%= @microposts.each do |micropost| %>
-    <div class="col-md-4 col-md-offset-2">
-      <p>
-        <%= micropost.content %>
-      </p>
-      <p>
-        <%= link_to "View", micropost_path(micropost) %>
-        <%= link_to "Delete" %>
-      </p>
+    <p>
+        <center>
+            <%= link_to "Show Microposts", "#", class: "btn btn-primary", id: "micropost-link" %>  
+        </center>
+      
+    </p>
+    <div class="row" id="micropost-section">
+      <%= @microposts.each do |micropost| %>
+      <div class="col-md-4 col-md-offset-2">
+          <p>
+              <%= micropost.content %>
+          </p>
+          <p>
+              <%= link_to "View", micropost_path(micropost) %>
+              <%= link_to "Delete" %>
+          </p>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="container-fluid">
-    <% if current_user %>
-    <center>
-      <%= link_to "Add Micropost", new_micropost_path, class: "btn btn-primary" %>      
-    </center>
-    <% end %> 
-  </div>
+</div>
+<br>
+<br>
+<div class="container-fluid">
+  <% if current_user %>
+  <center>
+    <%= link_to "Post", new_micropost_path, class: "btn btn-primary" %>      
+  </center>
+  <% end %> 
+</div>
       
       
       
