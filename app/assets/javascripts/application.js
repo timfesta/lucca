@@ -15,6 +15,14 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-	$(".img-responsive").fadeOut(5000);
+
+// fadeOut
+
+// $(document).ready(function() {
+// 	$(".img-responsive").fadeOut(5000);
+// });
+
+$("#image").fadeOut(function() { 
+  $(this).load(function() { $(this).fadeIn(5000); }); 
+  $(this).attr("src", "./assets/town.png"); 
 });
