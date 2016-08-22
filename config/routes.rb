@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'static_pages/home'
+  get '/' =>'static_pages#home'
 
   get 'static_pages/help'
 
@@ -16,6 +16,11 @@ Rails.application.routes.draw do
 	resources :recipes
 	resources :microposts
 	
-  	root 'microposts#index'
+	resources :products do
+		collection { post :import }
+	end
+
+  	root 'static_pages#home'
+
 
 end
