@@ -1,10 +1,17 @@
 <div class="container">
 	<p>
 		<h1><%= current_user.name %></h1>
-		
 	</p>
 	<p>
 		<h3>Microposts (<%= @user.microposts.count %>)</h3>
-
+	</p>
+	<p>
+		<% @microposts.each do |micropost| %>
+		<%= micropost.content %>
+		<% end %>
+	</p>
+	<p>
+		<%= link_to "Microposts", microposts_path %>
 	</p>
 </div>
+
