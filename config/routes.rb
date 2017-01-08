@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
 	resources :recipes
 	resources :microposts
+	resources :npos
+	resources :tasks
 	
 	resources :products do
 		collection { post :import }

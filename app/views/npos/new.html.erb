@@ -1,0 +1,9 @@
+<div class="container">
+	<h2>New Npo</h2>
+	<%= form_for @npo do |f| %>
+	<%= f.text_field :name, placeholder: "Name" %><br>
+	<%= f.text_field :about, placeholder: "About" %><br>
+	<br>
+	<%= f.submit "Add Your Npo", class:"btn btn-primary" %>
+	<% end %>	
+</div>
