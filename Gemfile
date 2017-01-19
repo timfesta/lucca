@@ -24,6 +24,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development, :test do
   gem 'byebug'

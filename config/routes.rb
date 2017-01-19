@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 		collection { post :import }
 	end
 
+	resources :charges
+	
   	root 'static_pages#home'
 
 
