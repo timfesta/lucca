@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 	end
 
 	resources :charges
-	
+	resources :purchases
+
   	root 'static_pages#home'
 
 
