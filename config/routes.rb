@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 	get 'signup' => 'users#new'
 	get 'profile' => 'users#show'
 	get 'posters' => 'users#index'
