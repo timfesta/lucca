@@ -1,11 +1,16 @@
 class ChargesController < ApplicationController
 
+	def home
+		
+	end
+
 	def new
+		@item = Item.find_by_sku("theCity")
 	end
 
 	def create
 	  # # Amount in cents
-	  @amount = 500
+	  @amount =  900
 
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],
